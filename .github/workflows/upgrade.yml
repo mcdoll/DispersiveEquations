@@ -1,0 +1,30 @@
+name: Bump mathlib to latest
+
+on:
+  schedule:
+    - cron: "0 18 * * *"   # run daily; adjust to taste
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Bump to latest
+        id: bump
+        uses: leanprover-community/downstream-reports/.github/actions/bump-to-latest@main
+        with:
+          downstream: DynamicalSystems   # must match the name in ci/inventory/downstreams.json
+
+      - name: Open or update PR
+        if: steps.bump.outputs.updated == 'true'
+        uses: leanprover-community/downstream-reports/.github/actions/open-bump-pr@main
+        with:
+          title:          ${{ steps.bump.outputs.pr-title }}
+          message:        ${{ steps.bump.outputs.bump-description }}
+          commit-message: ${{ steps.bump.outputs.commit-message }}
