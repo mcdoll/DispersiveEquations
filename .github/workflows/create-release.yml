@@ -3,7 +3,6 @@ name: Create Release
 on:
   push:
     branches:
-      - 'main'
       - 'master'
     paths:
       - 'lean-toolchain'

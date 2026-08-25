@@ -17,13 +17,13 @@ jobs:
 
       - name: Bump to latest
         id: bump
-        uses: leanprover-community/downstream-reports/.github/actions/bump-to-latest@main
+        uses: leanprover-community/downstream-reports/.github/actions/bump-to-latest@master
         with:
-          downstream: DynamicalSystems   # must match the name in ci/inventory/downstreams.json
+          downstream: DispersiveEquations   # must match the name in ci/inventory/downstreams.json
 
       - name: Open or update PR
         if: steps.bump.outputs.updated == 'true'
-        uses: leanprover-community/downstream-reports/.github/actions/open-bump-pr@main
+        uses: leanprover-community/downstream-reports/.github/actions/open-bump-pr@master
         with:
           title:          ${{ steps.bump.outputs.pr-title }}
           message:        ${{ steps.bump.outputs.bump-description }}
