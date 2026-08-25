@@ -44,6 +44,4 @@ thus extend the solution operator to a map $`H^s → C(ℝ, H^2)`.
 
 Every Fourier multiplier $`M_f` can be represented as a convolution operator with kernel
 $`K = 𝓕⁻ f`. Therefore, the explicit representation of the solution operator follows from the
-calculation of the Fourier transform of the complex Gaussian.
-
-test
+calculation of the Fourier transform of the complex Gaussian as outlined in the previous chapter.
