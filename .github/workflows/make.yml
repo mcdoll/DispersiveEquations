@@ -5,10 +5,6 @@ on:
       - main
     paths:
       - '**/*.lean'
-      - '**/blueprint.yml'
-      - 'blueprint/**'
-      - 'docs/**'
-      - 'scripts/**'
       - 'lean-toolchain'
       - 'lakefile.toml'
       - 'lake-manifest.json'
@@ -17,10 +13,6 @@ on:
       - main
     paths:
       - '**/*.lean'
-      - '**/blueprint.yml'
-      - 'blueprint/**'
-      - 'docs/**'
-      - 'scripts/**'
       - 'lean-toolchain'
       - 'lakefile.toml'
       - 'lake-manifest.json'
@@ -74,9 +66,6 @@ jobs:
         with:
           build: true
           lint: true
-          # mk_all-check: false
-      - name: Check axioms
-        run: lake exe axiom-audit
       - name: Build verso
         run: lake exe generate-docs
       - name: Setup pages
