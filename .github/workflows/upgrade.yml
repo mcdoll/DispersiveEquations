@@ -23,7 +23,7 @@ jobs:
 
       - name: Open or update PR
         if: steps.bump.outputs.updated == 'true'
-        uses: leanprover-community/downstream-reports/.github/actions/open-bump-pr@master
+        uses: leanprover-community/downstream-reports/.github/actions/open-bump-pr@main
         with:
           title:          ${{ steps.bump.outputs.pr-title }}
           message:        ${{ steps.bump.outputs.bump-description }}
