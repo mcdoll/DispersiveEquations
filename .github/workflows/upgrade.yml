@@ -17,7 +17,7 @@ jobs:
 
       - name: Bump to latest
         id: bump
-        uses: leanprover-community/downstream-reports/.github/actions/bump-to-latest@master
+        uses: leanprover-community/downstream-reports/.github/actions/bump-to-latest@main
         with:
           downstream: DispersiveEquations   # must match the name in ci/inventory/downstreams.json
 
