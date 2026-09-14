@@ -26,5 +26,6 @@ equations.
 The code is hosted on [Github](https://github.com/mcdoll/DispersiveEquations) and compiled with
 Lean {leanVersion}[].
 
-{include 1 DispersiveEquations.FourierGaussian.Documentation}
-{include 1 DispersiveEquations.SchroedingerPropagator.Documentation}
+{include 0 DispersiveEquations.FourierGaussian.Documentation}
+{include 0 DispersiveEquations.SchroedingerPropagator.Documentation}
+{include 0 DispersiveEquations.Bibliography}

@@ -45,3 +45,10 @@ thus extend the solution operator to a map $`H^s → C(ℝ, H^2)`.
 Every Fourier multiplier $`M_f` can be represented as a convolution operator with kernel
 $`K = 𝓕⁻ f`. Therefore, the explicit representation of the solution operator follows from the
 calculation of the Fourier transform of the complex Gaussian as outlined in the previous chapter.
+
+Once {ref "FTGaussian"}[the Fourier transform of the Gaussian] has been established, it only remains
+to show that the Gaussian indeed is a fundamental solution to the Schrödinger equation. The fact
+that it solves the equation follows from the calculation of the Fourier transform and the fact that
+for $`t = 0` it is the identity follows from calculating the limit $`t → 0` for the Fourier
+transformed Gaussian and the fact that the Fourier transform of the delta distribution is the
+constant $`1` function.
