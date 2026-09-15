@@ -51,9 +51,9 @@ for $`A` positive definite as a Schwartz function.
 
 Writing $`A = A₀ + i B₀`, we have that
 $$`\begin{aligned}
-e^{-⟨A x, x⟩ / 2} &= e^{-⟨A₀ x, x⟩} e^{-i ⟨B₀ x, x⟩}
+e^{-⟨A x, x⟩ / 2} &= e^{-⟨A₀ x, x⟩ / 2} e^{-i ⟨B₀ x, x⟩ / 2}
 \end{aligned}`
-Since by assumption $`A₀` is strictly positive, the first factor is a Schwartz function. The second
+Since by assumption $`A₀` is non-negative, the first factor has temperate growth. The second
 factor has temperate growth and therefore the product defines a tempered distribution.
 
 ## Step 1: A simple regularity theorem
@@ -65,7 +65,7 @@ This is Theorem 3.1.16 in {citet Hormander1}[].
 
 The proof of Theorem 3.1.16 is straightforward: let $`φ` be a test function and using Taylor's
 theorem, write
-$$`φ x = φ 0 + ∑ x_j φ_j x`
+$$`φ(x) = φ(0) + ∑ x_j φ_j(x)`
 for some $`φ_j`. Then plug this expression into $`u` and use the assumption.
 
 ## Step 2: ODE of the Gaussian
@@ -79,9 +79,15 @@ One direction is trivial, for the other direction apply Step 1 to $`e^{⟨A x, x
 
 From Step 2 we derive that the Fourier transform of a complex Gaussian is again a complex Gaussian.
 
-## Step 4: Calculate the constant: part 1
+## Step 4: Calculate the constant: analytic square root of the determinant
 
-tba
+Define the analytic square root $`(\operatorname{det} A)^{1/2}` for $`A` symmetric and positive real
+part following {citet Hormander1}[] (p. 87).
+
+The important result is that
+$$`(\operatorname{det}(iB))^{1/2} = |\operatorname{det}(B)|^{1/2} e^{iπ (\operatorname{sgn}(B))/4}`
+where $`\operatorname{sgn}` is the signature and $`B` is assumed to be purely imaginary and
+non-singular.
 
 ## Step 5: Calculate the constant: part 2
 
